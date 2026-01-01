@@ -7,7 +7,7 @@ def xml_to_dicts(file_path: str) -> list[Dict]:
     items = root.findall("item")
     
     if not items:
-        raise ValueError("XML não contém elementos <item>")
+        raise ValueError("XML doesn't have elements <item>")
     
     data = []
     
@@ -22,13 +22,13 @@ def xml_to_dicts(file_path: str) -> list[Dict]:
 
 def dicts_to_xml(data: List[Dict], file_path:str) -> None:
     if not isinstance(data, list) or not data:
-        raise ValueError("Dados devem ser uma lista de dicionários")
+        raise ValueError("Data must be a list of dictionaries")
 
     root = ET.Element("items")
 
     for record in data:
         if not isinstance(record, dict):
-            raise ValueError("Cada item deve ser um dicionário")
+            raise ValueError("Each item must be a dictionary")
             
         item_el = ET.SubElement(root, "item")
         

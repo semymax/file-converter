@@ -6,13 +6,13 @@ def json_to_dicts(file_path: str) -> List[Dict]:
         data = json.load(f)
 
     if not isinstance(data, list):
-        raise ValueError("JSON deve ser uma lista de objetos")
+        raise ValueError("JSON must be a list of objects")
     
     return data
     
 def dicts_to_json(data: List[Dict], file_path: str) -> None:
     if not isinstance(data, list):
-        raise ValueError("Dados devem ser um lista de dicionários")
+        raise ValueError("Data must be a list of dictionaries")
     
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)

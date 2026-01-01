@@ -8,7 +8,7 @@ def csv_to_dicts(file_path: str) -> List[Dict]:
     
 def dicts_to_csv(data: List[Dict], file_path: str) -> None:
     if not data:
-        raise ValueError("Dados Vazios")
+        raise ValueError("Empty data")
     
     with open(file_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=data[0].keys())

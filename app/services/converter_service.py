@@ -22,16 +22,16 @@ def convert(
     output_format: str,
 ) -> None:
     if not input_path or not output_path:
-        raise InvalidPathError("Caminho de arquivo inválido")
+        raise InvalidPathError("Invalid filepath")
 
     input_format = input_format.lower()
     output_format = output_format.lower()
     
     if input_format not in loaders:
-        raise UnsupportedFormatError("Formato de entrada não suportado")
+        raise UnsupportedFormatError("Unsupported input")
     
     if output_format not in dumpers:
-        raise UnsupportedFormatError("Formato de saída não suportado")
+        raise UnsupportedFormatError("Unsupported output")
     
     data = loaders[input_format](input_path)
     dumpers[output_format](data, output_path)
