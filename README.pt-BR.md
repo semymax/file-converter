@@ -50,8 +50,8 @@ python -m app.cli convert \
 
 - `--input`: Caminho para o arquivo de entrada
 - `--output`: Caminho para o arquivo de saída
-- `--input_format`: Formato do arquivo de entrada (csv, json, xml)
-- `--output_format`: Formato do arquivo de saída (csv, json, xml)
+- `--input-format`: Formato do arquivo de entrada (csv, json, xml)
+- `--output-format`: Formato do arquivo de saída (csv, json, xml)
 
 ### Exemplo
 
