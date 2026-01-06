@@ -64,3 +64,11 @@ python -m app.cli convert \
 ```
 
 ⚠️ Esta interface cli está sob desenvolvimento ativo e poderá evoluir conforme novos recursos sejam adicionados.
+
+## Rodando testes
+
+O projeto possui testes integrados utilizando `pytest`. Para realizar estes testes, execute o comando na pasta raiz do projeto.
+
+```bash
+pytest
+```

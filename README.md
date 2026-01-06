@@ -65,3 +65,11 @@ python -m app.cli convert \
 ```
 
 ⚠️ The CLI is under active development and may evolve as new features are added.
+
+## Running tests
+
+The project have integrated tests using `pytest`. To perform these tests run the command in the root folder of the project.
+
+```bash
+pytest
+```
